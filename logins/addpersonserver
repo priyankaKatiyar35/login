@@ -1,0 +1,55 @@
+
+<?php
+include("data_class.php");
+$addsize = $_POST['addname'];
+$addplannedstartdate = $_POST['addplannedstartdate'];
+$addplannedenddate = $_POST['addplannedenddate'];
+$addactualstartdate = $_POST['addactualstartdate'];
+$addactualenddate = $_POST['addactualenddate'];
+$addplannedefforts = $_POST['addplannedefforts'];
+$adddefects = $_POST['adddefects'];
+$addproductivity = $_POST['addproductivity'];
+$addcoderate = $_POST['addcoderate'];
+$addtestrate = $_POST['addtestrate'];
+$addct = $_POST['addct'];
+$addcodingtime = $_POST['addcodingtime'];
+$addtestingtime = $_POST['addtestingtime'];
+$adddesigntime = $_POST['adddesigntime'];
+$adddre = $_POST['adddre'];
+$addcodingeffectiveness = $_POST['addcodingeffectiveness'];
+$addtestingeffectiveness = $_POST['addtestingeffectiveness'];
+$addnooftestcase = $_POST['addnooftestcase'];
+$addsu = $_POST['addsu'];
+$addev = $_POST['addev'];
+
+$obj = new date();
+$obj ->setconnection();
+$obj ->addnewuser($addsize,$addplannedstartdate,$addplannedenddate,$addactualstartdate,$addactualenddate,$addplannedefforts,$adddefects,$addproductivity,$addcoderate,$addtestrate,$addct,$addcodingtime,$addingtime,$adddesigntime,$adddre.$addcodingeffectiveness,$addtestingeffectiveness,$addnooftestcase,$addsu,$addev);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
