@@ -1,0 +1,42 @@
+<?php include("config.php");
+
+    function __construct() {
+        // echo " constructor ";
+        echo "</br></br>";
+    }
+function addnewuser($addsize,$addplannedstartdate,$addplannedenddate,$actualstartdate,$actualenddate,$plannedefforts,
+$defects,$productivity,$coderate,$testrate,$ct,$codingtime,$testingtime,$designtime,$dre,$codingeffectiveness,
+$testingeffectiveness,$nooftestcase,$su,$ev){
+ $this->size=$size;
+ $this->plannedstartdate=$plannedstartdate;
+ $this->plannedenddate=$plannedenddate;
+ $this->actualstartdate=$actualstartdate;
+ $this->actualenddate=$actualenddate;
+ $this->plannedefforts=$plannedefforts;
+ $this->defects=$defects;
+ $this->productivity=$productivity;
+ $this->coderate=$coderate;
+ $this->testrate=$testrate;
+ $this->ct=$ct;
+ $this->codingtime=$codingtime;
+ $this->testingtime=$testingtime;
+ $this->designtime=$designtime;
+ $this->dre=$dre;
+ $this->codingeffectiveness=$codingeffectiveness;
+ $this->testingeffectiveness=$testingeffectiveness;
+ $this->nooftestcase=$nooftestcase;
+ $this->us=$us;
+ $this->ev=$ev;
+
+ $q="INSERT INTO requirement_analysis(size, plannedstartdate, plannedenddate, actualstartdate, actualenddate, plannedefforts, defects
+ , productivity, coderate, testrate, ct, codingtime, testingtime, designtime, dre, codingeffectiveness, testingeffectiveness, nooftestcase,us,ev)VALUES
+ ('','size', 'plannedstartdate', 'plannedenddate', 'actualstartdate', 'actualenddate', 'plannedefforts', 'defects'
+ , 'productivity', 'coderate', 'testrate', 'ct', 'codingtime', 'testingtime', 'designtime', 'dre', 'codingeffectiveness', 'testingeffectiveness', 'nooftestcase','us','ev')";
+if($this->connection->exec(sql)){
+    header("Location:admin_page.php?msg=new add done");
+
+} 
+else {
+    header("Location:admin_page.php?msg=fail");
+}
+}   
